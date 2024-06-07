@@ -11,7 +11,7 @@ import smtplib
 # Configura tu correo electrónico y contraseña
 email_user = 'thezulux@gmail.com'
 email_password = 'tuakehjlxgenlsoj'
-recep = 'dbarco@crecercapital.com.co'
+recep = 'thezulux@gmail.com'
 
 def send_email(user_email, message, files):
     msg = MIMEMultipart()
