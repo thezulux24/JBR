@@ -11,7 +11,7 @@ import smtplib
 # Configura tu correo electrónico y contraseña
 email_user = 'thezulux@gmail.com'
 email_password = 'tuakehjlxgenlsoj'
-recep = 'juanclopez@javerianacali.edu.co'
+recep = 'dbarco@crecercapital.com.co'
 
 def send_email(user_email, message, files):
     msg = MIMEMultipart()
@@ -37,14 +37,14 @@ def send_email(user_email, message, files):
 
 def page1():
     st.title("Objetivo de la línea de ética")
-    # Aquí puedes agregar el contenido de la primera página
+    st.text("'Aun en desarrollo'.")# Aquí puedes agregar el contenido de la primera página
     if st.button("Continuar"):
         st.session_state.page = 2
 
 def page2():
-    st.title("Formulario de denuncia")
+    st.title("Formulario de Reporte")
 
-    st.session_state.user_type = st.selectbox("Selecciona tu tipo de usuario", ["Estudiante activo", "Egresado", "Colaborador"])
+    st.session_state.user_type = st.selectbox("Selecciona tu tipo de usuario", ["Estudiante activo", "Egresado", "Colaborador", "Familiar"])
     st.session_state.report = st.text_area("Ingresa tu reporte")
     st.session_state.accused = st.text_input("Ingresa a quien deseas denunciar")
     st.session_state.files = st.file_uploader("Sube tus archivos", type=["png", "jpg", "pdf", "xlsx"], accept_multiple_files=True)
