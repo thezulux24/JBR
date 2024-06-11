@@ -9,6 +9,8 @@ import time
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 
+
+
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 KEY = 'json/key.json'
 SPREADSHEET_ID = '1C5a8r5ttZS_eUckkIpiKrhMzScXnNCXe2WuBZY9sfJY'
@@ -20,6 +22,13 @@ sheet = service.spreadsheets()
 email_user = 'envioreportesjbr@gmail.com'
 email_password = 'uogxyadradumrogo'
 recep = 'envioreportesjbr@gmail.com'
+
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 def send_email(user_email, message, files):
     msg = MIMEMultipart()
