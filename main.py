@@ -103,12 +103,13 @@ def page2():
         else:
             st.error("Por favor, llena todos los campos antes de enviar.")
 def main():
-    st.markdown("""
-        <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        </style>
-        """, unsafe_allow_html=True)
+
+    hide_github_icon = """
+    #GithubIcon {
+      visibility: hidden;
+    }
+    """
+    st.markdown(hide_github_icon, unsafe_allow_html=True)
 
     if "page" not in st.session_state:
         st.session_state.page = 1
