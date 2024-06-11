@@ -6,7 +6,6 @@ from email.mime.text import MIMEText
 import smtplib
 from datetime import datetime
 import time
-from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 
