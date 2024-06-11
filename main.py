@@ -60,7 +60,7 @@ def page1():
     - Actos de revelación indebida de información privilegiada o restringida
     - Otros actos que considere contrarios a las normas
     """)
-
+    st.button("hola")
     if st.button("Continuar"):
         st.session_state.page = 2
 
@@ -110,7 +110,7 @@ def main():
         footer {visibility: hidden;}
         </style>
         """, unsafe_allow_html=True)
-    
+
     if "page" not in st.session_state:
         st.session_state.page = 1
 
