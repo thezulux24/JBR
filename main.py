@@ -16,16 +16,16 @@ from google.oauth2 import service_account
 
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-KEY = st.secrets("KEY_PATH")
-SPREADSHEET_ID = st.secrets("SPREADSHEET_ID")
+KEY = st.secrets("key_path")
+SPREADSHEET_ID = st.secrets("spreedsheet")
 
 creds = None
 creds = service_account.Credentials.from_service_account_file(KEY, scopes=SCOPES)
 service = build('sheets', 'v4', credentials=creds)
 sheet = service.spreadsheets()
-email_user = st.secrets("EMAIL_USER")
-email_password = st.secrets("EMAIL_PASSWORD")
-recep = st.secrets("RECEP")
+email_user = st.secrets("email_user")
+email_password = st.secrets("email_password")
+recep = st.secrets("recep")
 
 
 
