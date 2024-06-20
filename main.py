@@ -1,6 +1,4 @@
 import streamlit as st
-
-import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
