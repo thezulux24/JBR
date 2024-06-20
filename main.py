@@ -1,4 +1,6 @@
 import streamlit as st
+from dotenv import load_dotenv
+import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
@@ -10,18 +12,20 @@ from googleapiclient.discovery import build
 from google.oauth2 import service_account
 
 
+#in server create the credentials .env
 
+load_dotenv()
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-KEY = 'json/key.json'
-SPREADSHEET_ID = '1C5a8r5ttZS_eUckkIpiKrhMzScXnNCXe2WuBZY9sfJY'
+KEY = os.getenv('KEY_PATH')
+SPREADSHEET_ID = os.getenv('SPREADSHEET_ID')
 
 creds = None
 creds = service_account.Credentials.from_service_account_file(KEY, scopes=SCOPES)
 service = build('sheets', 'v4', credentials=creds)
 sheet = service.spreadsheets()
-email_user = 'envioreportesjbr@gmail.com'
-email_password = 'uogxyadradumrogo'
-recep = 'envioreportesjbr@gmail.com'
+email_user = os.getenv('EMAIL_USER')
+email_password = os.getenv('EMAIL_PASSWORD')
+recep = os.getenv('RECEP')
 
 
 
