@@ -22,8 +22,8 @@ creds = None
 creds = service_account.Credentials.from_service_account_file(KEY, scopes=SCOPES)
 service = build('sheets', 'v4', credentials=creds)
 sheet = service.spreadsheets()
-email_user = st.secrets["email_user"]
-email_password = st.secrets["email_password"]
+email_user = st.secrets["user"]
+email_password = st.secrets["password"]
 recep = st.secrets["recep"]
 
 
